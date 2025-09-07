@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { CARS } from '../constants';
+import { CARS, SALES_INFO } from '../constants';
 import { Car, CarColor } from '../types';
 import TestDriveModal from '../components/TestDriveModal';
 
@@ -33,6 +32,9 @@ const CarDetailPage: React.FC = () => {
     if (!car) {
         return <div className="text-center py-20">Mobil tidak ditemukan.</div>;
     }
+
+    const message = `Halo ${SALES_INFO.name}, saya tertarik untuk memesan mobil ${car.name}. Mohon informasinya lebih lanjut.`;
+    const whatsappOrderUrl = `https://api.whatsapp.com/send?phone=${SALES_INFO.phone}&text=${encodeURIComponent(message)}`;
 
     const currentImageUrl = selectedColor ? selectedColor.imageUrl : car.image;
 
@@ -77,13 +79,25 @@ const CarDetailPage: React.FC = () => {
                             <h1 className="text-3xl md:text-4xl font-extrabold text-suzukiBlue leading-tight">{car.name}</h1>
                             <p className="text-lg text-gray-600 mt-2">{car.tagline}</p>
                             
-                            <div className="mt-6">
+                            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <button
                                     onClick={() => setIsModalOpen(true)}
-                                    className="w-full bg-suzukiRed text-white font-bold py-3 px-8 rounded-md hover:bg-red-700 transition-colors duration-300 text-lg"
+                                    className="w-full bg-suzukiRed text-white font-bold py-3 px-6 rounded-md hover:bg-red-700 transition-colors duration-300 text-lg"
                                 >
                                     Jadwalkan Test Drive
                                 </button>
+                                <a
+                                    href={whatsappOrderUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-full block"
+                                >
+                                    <button
+                                        className="w-full bg-suzukiBlue text-white font-bold py-3 px-6 rounded-md hover:bg-blue-800 transition-colors duration-300 text-lg"
+                                    >
+                                        Pesan Sekarang
+                                    </button>
+                                </a>
                             </div>
 
                             <div className="mt-8 border-t pt-6">
@@ -114,15 +128,30 @@ const CarDetailPage: React.FC = () => {
                                     <tr>
                                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Varian</th>
                                         <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Harga (OTR Bandung)</th>
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Info</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-200">
-                                    {car.variants.map(variant => (
-                                        <tr key={variant.name}>
-                                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{variant.name}</td>
-                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 text-right font-semibold">{formatPrice(variant.price)}</td>
-                                        </tr>
-                                    ))}
+                                    {car.variants.map(variant => {
+                                        const variantMessage = `Halo ${SALES_INFO.name}, saya tertarik untuk memesan mobil ${car.name} varian ${variant.name}. Mohon informasinya.`;
+                                        const variantWhatsappUrl = `https://api.whatsapp.com/send?phone=${SALES_INFO.phone}&text=${encodeURIComponent(variantMessage)}`;
+                                        return (
+                                            <tr key={variant.name}>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{variant.name}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 text-right font-semibold">{formatPrice(variant.price)}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-right">
+                                                    <a 
+                                                        href={variantWhatsappUrl}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="bg-green-500 text-white font-bold py-2 px-4 rounded-md hover:bg-green-600 transition-colors duration-300"
+                                                    >
+                                                        Pesan
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        );
+                                    })}
                                 </tbody>
                             </table>
                         </div>

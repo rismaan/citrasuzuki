@@ -46,6 +46,36 @@ export const VIDEOS: { title: string; embedUrl: string }[] = [
 
 export const CARS: Car[] = [
   {
+    id: 'fronx',
+    name: 'Fronx',
+    image: 'https://imgcdn.oto.com/large/gallery/exterior/37/3224/suzuki-fronx-front-side-view-744342.jpg',
+    tagline: 'The Shape of New',
+    description: 'Suzuki Fronx adalah SUV coupe yang memadukan desain futuristik dengan performa sporty. Tampil beda di jalanan dengan gaya yang unik dan fitur-fitur canggih.',
+    features: [
+        { iconUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/3224/suzuki-fronx-front-side-view-744342.jpg', text: 'Head-Up Display' },
+        { iconUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/3224/suzuki-fronx-front-side-view-744342.jpg', text: '360 View Camera' },
+        { iconUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/3224/suzuki-fronx-front-side-view-744342.jpg', text: 'Wireless Charger' },
+        { iconUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/3224/suzuki-fronx-front-side-view-744342.jpg', text: '6 Airbags' },
+    ],
+    colors: [
+        { name: 'Ice Grayish Blue', hex: ['#A8B6BD', '#2C2C2C'], imageUrl: 'https://i.imghippo.com/files/ARkP8374QxU.webp' },
+        { name: 'White Black', hex: ['#FFFFFF', '#2C2C2C'], imageUrl: 'https://i.imghippo.com/files/Khn4464Fb.webp' },
+        { name: 'Savanna Ivory Black', hex: ['#EAE0D3', '#2C2C2C'], imageUrl: 'https://i.imghippo.com/files/fyG3310mUc.webp' },
+        { name: 'Snow White Pearl', hex: '#FFFFFF', imageUrl: 'https://i.imghippo.com/files/zVC3295TCY.webp' },
+        { name: 'Cool Black', hex: '#2C2C2C', imageUrl: 'https://i.imghippo.com/files/Sv6768iqg.webp' },
+        { name: 'Savanna Ivory', hex: '#EAE0D3', imageUrl: 'https://i.imghippo.com/files/MCaS9722xIk.webp' },
+        { name: 'Metallic Magma Gray', hex: '#555555', imageUrl: 'https://i.imghippo.com/files/TnJj7209K.webp' },
+    ],
+    variants: [
+        { name: 'FRONX GL MT', price: 261800000 },
+        { name: 'FRONX GL AT', price: 273800000 },
+        { name: 'FRONX GX MT', price: 278800000 },
+        { name: 'FRONX GX AT', price: 296600000 },
+        { name: 'FRONX SGX', price: 322600000 },
+        { name: 'FRONX SGX 2TONE', price: 324600000 },
+    ]
+  },
+  {
     id: 'xl7-hybrid',
     name: 'Suzuki XL7 Hybrid',
     image: 'https://imgcdn.oto.com/medium/gallery/exterior/37/2220/suzuki-xl7-12009.jpg',
@@ -58,9 +88,14 @@ export const CARS: Car[] = [
       { iconUrl: 'https://imgcdn.oto.com/medium/gallery/exterior/37/2220/suzuki-xl7-12009.jpg', text: 'Autolight with Guide Me Light' },
     ],
     colors: [
-      { name: 'Savanna Ivory', hex: '#EAE0D3', imageUrl: 'https://imgcdn.oto.com/medium/gallery/exterior/37/2220/suzuki-xl7-12009.jpg' },
-      { name: 'Snow White', hex: '#FFFFFF', imageUrl: 'https://imgcdn.oto.com/medium/gallery/exterior/37/2220/suzuki-xl7-12009.jpg' },
-      { name: 'Cool Black', hex: '#2C2C2C', imageUrl: 'https://imgcdn.oto.com/medium/gallery/exterior/37/2220/suzuki-xl7-12009.jpg' },
+      
+      { name: 'Savanna Ivory Black', hex: ['#EAE0D3', '#2C2C2C'], imageUrl: 'https://i.imghippo.com/files/Sct7171cc.webp' },
+      { name: 'White Black', hex: ['#FFFFFF', '#2C2C2C'], imageUrl: 'https://i.imghippo.com/files/HV2098EGw.webp' },
+      { name: 'Sunrise Orange Black', hex: ['#E67451', '#2C2C2C'], imageUrl: 'https://i.imghippo.com/files/MlzI1488TrY.webp' },
+      { name: 'Snow White Pearl', hex: '#FFFFFF', imageUrl: 'https://i.imghippo.com/files/yWW1938j.webp' },
+      { name: 'Metallic Magma Gray', hex: '#555555', imageUrl: 'https://i.imghippo.com/files/M3194Fg.webp' },
+      { name: 'Cool Black', hex: '#2C2C2C', imageUrl: 'https://i.imghippo.com/files/JWi4582Jo.webp' },
+      { name: 'Brave Khakhi', hex: '#4A3728', imageUrl: 'https://i.imghippo.com/files/dUtg6545YJ.webp' },
     ],
     variants: [
       { name: 'XL7 ZETA MT', price: 269900000 },
@@ -86,7 +121,7 @@ export const CARS: Car[] = [
       { iconUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/2614/suzuki-ertiga-smart-hybrid-front-angle-low-view-164264.jpg', text: 'Rear Camera' },
     ],
     colors: [
-      { name: 'Brave Khaki', hex: '#797869', imageUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/2614/suzuki-ertiga-smart-hybrid-front-angle-low-view-164264.jpg' },
+      { name: 'Cool Black', hex: '#2C2C2C', imageUrl: 'https://i.imghippo.com/files/xaIJ3386w.webp' },
       { name: 'Silky Silver', hex: '#C0C0C0', imageUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/2614/suzuki-ertiga-smart-hybrid-front-angle-low-view-164264.jpg' },
       { name: 'Cool Black', hex: '#2C2C2C', imageUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/2614/suzuki-ertiga-smart-hybrid-front-angle-low-view-164264.jpg' },
     ],
@@ -140,6 +175,7 @@ export const CARS: Car[] = [
       { name: 'Kinetic Yellow', hex: '#F7D002', imageUrl: 'https://imgcdn.oto.com/medium/gallery/exterior/37/782/suzuki-jimny-24418.jpg' },
       { name: 'Jungle Green', hex: '#2E3B27', imageUrl: 'https://imgcdn.oto.com/medium/gallery/exterior/37/782/suzuki-jimny-24418.jpg' },
       { name: 'Bluish Black Pearl', hex: '#1C2127', imageUrl: 'https://imgcdn.oto.com/medium/gallery/exterior/37/782/suzuki-jimny-24418.jpg' },
+      { name: 'Kinetic Yellow / Black Roof', hex: ['#F7D002', '#1C2127'], imageUrl: 'https://imgcdn.oto.com/medium/gallery/exterior/37/782/suzuki-jimny-24418.jpg' },
     ],
     variants: [
       { name: 'JIMNY 3 DOOR MT', price: 511500000 },
@@ -166,9 +202,11 @@ export const CARS: Car[] = [
       { iconUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/2620/suzuki-s-presso-front-angle-low-view-628835.jpg', text: 'Dual Airbags' },
     ],
     colors: [
-      { name: 'Sizzle Orange', hex: '#F37F1B', imageUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/2620/suzuki-s-presso-front-angle-low-view-628835.jpg' },
-      { name: 'Solid Fire Red', hex: '#E41F26', imageUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/2620/suzuki-s-presso-front-angle-low-view-628835.jpg' },
-      { name: 'Pearl Starry Blue', hex: '#1A376C', imageUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/2620/suzuki-s-presso-front-angle-low-view-628835.jpg' },
+      { name: 'White', hex: '#FFFFFF', imageUrl: 'https://i.imghippo.com/files/BRSe6891zew.webp' },
+      { name: 'Silky Silver Metallic', hex: '#AAA9AD', imageUrl: 'https://i.imghippo.com/files/oOZ6122cM.webp' },
+      { name: 'Granite Grey Metallic', hex: '#808782', imageUrl: 'https://i.imghippo.com/files/oXOc5268jGs.webp' },
+      { name: 'Solid Fire Red', hex: '#B82025', imageUrl: 'https://i.imghippo.com/files/Boh6541CQ.webp' },
+      { name: 'Sizzle Orange', hex: '#FF6B1A', imageUrl: 'https://i.imghippo.com/files/uT6186bM.webp' },
     ],
     variants: [
       { name: 'S-PRESSO MT', price: 176600000 },
@@ -223,32 +261,7 @@ export const CARS: Car[] = [
         { name: 'APV SGX MT AB', price: 253900000 },
     ]
   },
-  {
-    id: 'fronx',
-    name: 'Fronx',
-    image: 'https://imgcdn.oto.com/large/gallery/exterior/37/3224/suzuki-fronx-front-side-view-744342.jpg',
-    tagline: 'The Shape of New',
-    description: 'Suzuki Fronx adalah SUV coupe yang memadukan desain futuristik dengan performa sporty. Tampil beda di jalanan dengan gaya yang unik dan fitur-fitur canggih.',
-    features: [
-        { iconUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/3224/suzuki-fronx-front-side-view-744342.jpg', text: 'Head-Up Display' },
-        { iconUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/3224/suzuki-fronx-front-side-view-744342.jpg', text: '360 View Camera' },
-        { iconUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/3224/suzuki-fronx-front-side-view-744342.jpg', text: 'Wireless Charger' },
-        { iconUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/3224/suzuki-fronx-front-side-view-744342.jpg', text: '6 Airbags' },
-    ],
-    colors: [
-        { name: 'Earthen Brown', hex: '#5C4033', imageUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/3224/suzuki-fronx-front-side-view-744342.jpg' },
-        { name: 'Opulent Red', hex: '#A52A2A', imageUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/3224/suzuki-fronx-front-side-view-744342.jpg' },
-        { name: 'Splendid Silver', hex: '#C0C0C0', imageUrl: 'https://imgcdn.oto.com/large/gallery/exterior/37/3224/suzuki-fronx-front-side-view-744342.jpg' },
-    ],
-    variants: [
-        { name: 'FRONX GL MT', price: 261800000 },
-        { name: 'FRONX GL AT', price: 273800000 },
-        { name: 'FRONX GX MT', price: 278800000 },
-        { name: 'FRONX GX AT', price: 296600000 },
-        { name: 'FRONX SGX', price: 322600000 },
-        { name: 'FRONX SGX 2TONE', price: 324600000 },
-    ]
-  }
+  
 ];
 
 export const TESTIMONIALS: Testimonial[] = [

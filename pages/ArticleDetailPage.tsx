@@ -27,18 +27,21 @@ const ArticleDetailPage: React.FC = () => {
     };
 
     return (
-        <div className="py-8 md:py-12">
+        <div 
+            className="py-8 md:py-12"
+            style={{ backgroundImage: "url('https://www.toptal.com/designers/subtlepatterns/uploads/light-grey-terrazzo.png')" }}
+        >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto">
                     <div className="mb-6">
-                        <Link to="/" className="inline-flex items-center text-suzukiBlue hover:text-suzukiRed font-semibold transition-colors duration-300 group">
+                        <Link to="/" className="inline-flex items-center text-suzukiBlue hover:text-suzukiRed font-semibold transition-colors duration-300 group bg-white/80 backdrop-blur-sm px-4 py-2 rounded-lg shadow">
                             <svg className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
                             Kembali ke Beranda
                         </Link>
                     </div>
 
                     {/* Breadcrumbs */}
-                    <nav className="mb-6 text-sm text-gray-500">
+                    <nav className="mb-6 text-sm text-gray-500 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-lg shadow w-fit">
                         <Link to="/" className="hover:text-suzukiBlue">Home</Link>
                         <span className="mx-2">/</span>
                         <a href="/#artikel" className="hover:text-suzukiBlue">Artikel</a>

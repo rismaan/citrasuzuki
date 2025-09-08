@@ -5,7 +5,7 @@ export interface CarVariant {
 
 export interface CarColor {
   name: string;
-  hex: string;
+  hex: string | string[];
   imageUrl: string;
 }
 
